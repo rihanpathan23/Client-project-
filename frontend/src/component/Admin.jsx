@@ -2,7 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 const ADMIN_ID = 'admin23';
 const ADMIN_PASS = '93221';
-const API_URL = `${import.meta.env.VITE_API_URL}/api/bookings`;
+const API_URL =
+  `${import.meta.env.VITE_API_URL || 'https://client-project-backend-wnr2.onrender.com'}/api/bookings`;
 
 const Admin = ({ open, onClose }) => {
   const [loggedIn, setLoggedIn] = useState(sessionStorage.getItem('tg_admin') === 'yes');
